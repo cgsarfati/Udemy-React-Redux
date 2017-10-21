@@ -25,4 +25,4 @@
 // Class component has ability to be aware of itself / introspective (e.g. user input)
 
 // define Searchbar class and give it all functionality that React.component has
-// every class must have a re
+// every class must have a render
