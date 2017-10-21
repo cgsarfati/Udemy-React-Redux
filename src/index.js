@@ -18,17 +18,26 @@
     // return <div>Hi!</div>;
 // }
 
+// ES6 syntax: Drop fn keyword, add arrow =>; diff. way to declare fn.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// when we export our own file, need relative path.
+import SearchBar from './components/search_bar';
 
 // Youtube API
 const API_KEY = 'AIzaSyDJtQDGtubORdaQYym2cH6XzBUOgI_MZQA';
 
 // Create new component
-// ES6 syntax: Drop fn keyword, add arrow =>; diff. way to declare fn.
+
 const App = () => {
-    return <div>Hi!</div>;
+    return (
+      <div>
+        <SearchBar />
+      </div>
+    );
 }
 
-// Take component and put it on DOM
+// Put component to DOM
 ReactDOM.render(<App />, document.querySelector('.container'));
