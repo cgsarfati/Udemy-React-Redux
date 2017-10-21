@@ -11,6 +11,8 @@
 
 // parameters for .render: (component, place in DOM to put it)
 
+// RULE: ONE COMPONENT PER FILE!
+
 // OLD JS: 
 // const App = function() {
     // return <div>Hi!</div>;
@@ -18,6 +20,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// Youtube API
+const API_KEY = 'AIzaSyDJtQDGtubORdaQYym2cH6XzBUOgI_MZQA';
 
 // Create new component
 // ES6 syntax: Drop fn keyword, add arrow =>; diff. way to declare fn.
