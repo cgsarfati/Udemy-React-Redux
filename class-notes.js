@@ -26,3 +26,16 @@
 
 // define Searchbar class and give it all functionality that React.component has
 // every class must have a render
+
+// STATE: plain JS object used to record and react to user events. 
+// each class-based component (NOT functional comp.) has its own state object.
+// whenever state changed, component immediately re-renders +
+// forces all its children to re-render too.
+
+// Need to INITIALIZE state object in class component before we can use it
+// Set property state to plain JS object inside of the class's constructor
+// method. 
+
+// Constructor method: used to do set-up for class (like __init__);
+// super(props) --> using parent class method fro component
+// everytime user types in search bar, this.state.term gets updated w/ value
