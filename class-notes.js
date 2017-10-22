@@ -1,3 +1,8 @@
+/////////////  PART 1 //////////////
+
+// Webpack/Babel gets all React components (aka 'views') which are 
+// snippets of JS code that produce html, and puts it in bundle.js 
+
 // react = used to render create/make components
 // reactDOM = used to put components to DOM
 
@@ -32,10 +37,30 @@
 // whenever state changed, component immediately re-renders +
 // forces all its children to re-render too.
 
-// Need to INITIALIZE state object in class component before we can use it
-// Set property state to plain JS object inside of the class's constructor
-// method. 
+// Recap: state is plain JS object that exists in a class-based component.
+// each instance of a class-based component has its own copy of state.
+// We initialize state by having constructor method + setting state as "this.state"
 
 // Constructor method: used to do set-up for class (like __init__);
 // super(props) --> using parent class method fro component
 // everytime user types in search bar, this.state.term gets updated w/ value
+
+// BIG TAKE-AWAY: we can only manipulate state inside the constructor method!!!!
+
+// to reference JS var, wrap it in {} inside JSX.
+
+// CONTROLLED COMPONENT: has its value set by state so its value only 
+// changes when the state changes.
+
+// ORDER OF OPERATIONS SO FAR:
+    // Index.js. App starts. Renders instance of <SearchBar>
+    // in search_bar.js, constructor called. this.state set to empty str.
+    // Component renders. Value of input set to retrieve value from this.state.term
+    // When user enters text, state updated. this.state.term set equal to changed value.
+    // Here, when event handler runs, value of input has NOT ACTUALLY CHANGED. 
+    // When .setState called, component immediately RE-RENDERS
+    // When render fn called again, value of the input is updated to receive the new value
+    // Component finishes rendering, now new value of input visible on screen
+
+
+
